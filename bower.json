@@ -1,0 +1,27 @@
+{
+	"name": "ui5-control-svgimage",
+	"description": "A UI5 control for replacing external SVG with embedded one",
+	"main": "control/SVGImage.js",
+	"authors": [
+		"Holger Schaefer <h.schaefer@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"sap",
+		"ui5",
+		"control",
+		"svg",
+		"image"
+	],
+	"moduleType": [
+		"amd"
+	],
+	"homepage": "https://github.com/hschaefer123/ui5-control-svgimage/",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"demo"
+	]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>SVG Image (UI5 control)</title>
+
+		<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async"
+			data-sap-ui-language="en"
+			data-sap-ui-resourceroots='{"openui5developer.svgimage.demo": ""}'>
+		</script>
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "openui5developer.svgimage.demo"
+					})
+				}).placeAt("content");
+				
+				var oCompContainer = new sap.ui.core.ComponentContainer({
+					height : "100%"
+				}).placeAt("content");
+				
+				sap.ui.component({
+					name : "openui5developer.svgimage.demo",
+					manifestFirst: true,
+					async: true
+				}).then(function(oComponent){
+					oCompContainer.setComponent(oComponent);
+			 	});				
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
