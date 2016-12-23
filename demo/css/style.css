@@ -1,1 +1,53 @@
-/* Enter your custom styles here */
+/* Theme uiThemeOpenUI5
+** OpenUI5 SVG colors (ex. fill|path|stroke) 
+*/
+.uiThemeOpenUI5 .uiSVGImageBaseColor {
+    fill: #009de0;
+}
+.uiThemeOpenUI5 .uiSVGImageBackgroundColor {
+    fill: #fff;
+}
+.uiThemeOpenUI5 .uiSVGImageLineColor {
+    fill: #505156;
+}
+.uiThemeOpenUI5 .uiSVGImageLineColor2 {
+    fill: #505156;
+}
+
+/* Theme uiThemeSAPUI5
+** SAPUI5 SVG colors 
+*/
+.uiThemeSAPUI5 .uiSVGImageBaseColor {
+    fill: #FFBB08;
+}
+.uiThemeSAPUI5 .uiSVGImageBackgroundColor {
+    fill: #000;
+}
+.uiThemeSAPUI5 .uiSVGImageLineColor {
+    fill: #737373;
+}
+.uiThemeSAPUI5 .uiSVGImageLineColor2 {
+    fill: #231F20;
+}
+
+/*.injected-svg prototypes */ 
+
+/* sap.m.Button css fix */
+.sapMBtnIcon.uiSVGImage {
+	padding: 0.25rem;
+    box-sizing: border-box;
+	height: 100%;
+}
+
+/* sap.m.MessageStrip custom icon fix */
+.sapMMsgStripIcon>svg {
+	width: auto;
+	height: 1rem;
+}
+
+/* sap.ui.unified fix */
+.sapUiMnuItmIco>svg {
+	padding-left: 0;
+	max-width: 1rem;
+	max-height: 1rem;
+}

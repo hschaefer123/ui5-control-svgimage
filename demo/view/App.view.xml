@@ -1,10 +1,147 @@
-<mvc:View controllerName="openui5developer.svgimage.demo.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="openui5developer.svgimage.demo.controller.App" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:core="sap.ui.core" xmlns:f="sap.f" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap"
+	xmlns:uc="ui5.control">
 	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
-			</Page>
-		</pages>
+		<uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader isObjectTitleAlwaysVisible="false" objectTitle="{i18n>title}" objectImageURI="svg/SVG_Logo.inline.svg"/>
+			</uxap:headerTitle>
+			<uxap:headerContent>
+				<l:VerticalLayout>
+					<Link text="Using SVG" href="https://css-tricks.com/using-svg/" target="_blank"/>
+					<Link text="SVGO Optimizer" href="https://jakearchibald.github.io/svgomg/" target="_blank"/>
+					<Link text="Wikipedia SVG" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank"/>
+					<Link text="World Vector Logo" href="https://worldvectorlogo.com/" target="_blank"/>
+				</l:VerticalLayout>
+				<l:VerticalLayout>
+					<Text text="Theme: .{ui>/selectTheme}" />
+					<SegmentedButton selectedKey="{ui>/selectTheme}" select="onLibSelect">
+						<items>
+							<SegmentedButtonItem width="6rem" key="uiThemeOpenUI5" text="OpenUI5" />
+							<SegmentedButtonItem width="6rem" key="uiThemeSAPUI5" text="SAPUI5" />
+						</items>
+					</SegmentedButton>
+				</l:VerticalLayout>
+				<l:VerticalLayout>
+					<Text text="Image" />
+					<SegmentedButton selectedKey="{ui>/imageSrc}">
+						<items>
+							<SegmentedButtonItem width="5rem" key="svg/OpenUI5.inline.svg" text="Logo" />
+							<SegmentedButtonItem width="5rem" key="svg/DEV.inline.svg" text="DEV" />
+							<SegmentedButtonItem width="5rem" key="svg/HCP.inline.svg" text="HCP" />
+						</items>
+					</SegmentedButton>
+				</l:VerticalLayout>
+				<MessageStrip class="sapUiMediumMarginEnd" type="Error" showIcon="true" text="ObjectPageLayout bug! The control currently renders the same imageId for both images!" >
+					<layoutData>
+						<uxap:ObjectPageHeaderLayoutData width="100%"/>
+					</layoutData>
+				</MessageStrip>
+				<MessageStrip class="sapUiMediumMarginEnd" type="Warning" showIcon="true" text="Take care that some controls (Button, MessageStrip, MenuItem) need a css fix to properly size and display images instead of icons!" >
+					<layoutData>
+						<uxap:ObjectPageHeaderLayoutData width="100%"/>
+					</layoutData>
+				</MessageStrip>
+			</uxap:headerContent>		
+			<uxap:sections>
+				<uxap:ObjectPageSection title="Controls" titleUppercase="false">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="Images">
+							<l:VerticalLayout>
+								<Label text="sap.m.LightBox" />
+								<Image width="5rem" height="5rem" src="{ui>/imageSrc}" tooltip="Image">
+									<detailBox>
+										<LightBox>
+											<LightBoxItem imageSrc="{ui>/imageSrc}" title="SVG Image" subtitle="LightBoxItem" alt="SVG Image" />
+										</LightBox>
+									</detailBox>
+								</Image>
+							</l:VerticalLayout>
+							<l:VerticalLayout>
+								<Label text="sap.m.Image" />
+								<Image width="5rem" height="5rem" src="{ui>/imageSrc}" tooltip="Image"/>
+							</l:VerticalLayout>
+							<!--
+							<l:VerticalLayout>
+								<Label text="ui5.control.SVGImage"/>
+								<uc:SVGImage width="5rem" height="5rem" src="{ui>/imageSrc}" />	
+							</l:VerticalLayout>
+							-->
+						</uxap:ObjectPageSubSection>
+						
+						<uxap:ObjectPageSubSection title="Buttons">	
+							<l:VerticalLayout>
+								<Label text="sap.m.Button"/>
+								<Button id="sapMenuButton" text="click to open sap.ui.unified.Menu" icon="{ui>/imageSrc}" iconDensityAware="false"  press="onMenu" />
+							</l:VerticalLayout>
+							<l:VerticalLayout>
+								<Label text="sap.m.ToggleButton"/>
+								<ToggleButton text="toggle me..." pressed="true" icon="{ui>/imageSrc}" iconDensityAware="false"/>
+							</l:VerticalLayout>
+						</uxap:ObjectPageSubSection>
+						
+						<uxap:ObjectPageSubSection title="sap.m.List">
+							<List>
+								<StandardListItem title="StandardListItem" icon="{ui>/imageSrc}" iconDensityAware="false" />
+								<ObjectListItem title="ObjectListItem" icon="{ui>/imageSrc}" iconDensityAware="false" />
+							</List>
+						</uxap:ObjectPageSubSection>
+						
+						<uxap:ObjectPageSubSection title="sap.m.MessageStrip">		
+							<MessageStrip class="sapUiMediumMarginBottom" text="Custom Icon" type="Information" showIcon="true"
+								customIcon="{ui>/imageSrc}">
+							</MessageStrip>
+							<MessageStrip class="sapUiMediumMarginBottom" text="Locked" type="Information" showIcon="true"
+								customIcon="sap-icon://locked">
+							</MessageStrip>
+						</uxap:ObjectPageSubSection>
+						
+						<uxap:ObjectPageSubSection title="sap.m.NotificationListGroup">
+							<List Xclass="sapContrast">
+								<NotificationListGroup title="NotificationListGroup" authorName="authorName" authorPicture="{ui>/imageSrc}">
+									<items>
+										<NotificationListItem title="NotificationListItem" authorPicture="{ui>/imageSrc}">
+											<!--
+											<buttons>
+												<Button text="Accept All" type="Accept" press="onAcceptErrors"/>
+												<Button text="Reject All" type="Reject" press="onRejectPress"/>
+											</buttons>
+											-->
+										</NotificationListItem>
+									</items>
+									<!--
+									<buttons>
+										<Button text="Accept All" type="Accept" press="onAcceptErrors"/>
+										<Button text="Reject All" type="Reject" press="onRejectPress"/>
+									</buttons>
+									-->
+								</NotificationListGroup>
+							</List>
+						</uxap:ObjectPageSubSection>
+						
+						<uxap:ObjectPageSubSection title="sap.f.Avatar [1.46] (currently no background SVG implemented!)">
+							<l:VerticalLayout>
+								<Label text="Regurlar"/>
+								<f:Avatar src="{ui>/imageSrc}" />
+							</l:VerticalLayout>
+							<l:VerticalLayout>
+								<Label text="Square DisplayShape"/>
+								<f:Avatar src="{ui>/imageSrc}" displaySize="XL" displayShape="Square" XimageFitType="Cover"/>
+							</l:VerticalLayout>
+							<l:VerticalLayout>
+								<Label text="Initials"/>
+								<f:Avatar initials="HS" />
+							</l:VerticalLayout>
+							<l:VerticalLayout>
+								<Label text="Placeholder"/>
+								<f:Avatar />
+							</l:VerticalLayout>
+						</uxap:ObjectPageSubSection>						
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
 	</App>
 </mvc:View>

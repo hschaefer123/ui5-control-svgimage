@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.ui.unified" xmlns:core="sap.ui.core">
+	<Menu id="menu" title="sap.ui.unified.Menu">
+		<MenuItem text="Item" icon="sap-icon://save"/>
+		<MenuItem text="MenuItem" icon="{ui>/imageSrc}"/>
+		<MenuTextFieldItem label="Find" startsSection="true" icon="sap-icon://filter"/>
+		<MenuTextFieldItem label="MenuTextFieldItem" icon="{ui>/imageSrc}"/>
+	</Menu>
+</core:FragmentDefinition>

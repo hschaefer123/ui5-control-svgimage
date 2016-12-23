@@ -15,7 +15,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"_version": "1.1.0",
 		"technology": "UI5",
@@ -35,10 +34,8 @@
 		"supportedThemes": [
 			"sap_hcb",
 			"sap_belize"
-
 		]
 	},
-
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
@@ -50,7 +47,10 @@
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
-				"sap.ui.layout": {}
+				"sap.f": {},
+				"sap.ui.layout": {},
+				"sap.ui.unified": {},
+				"sap.uxap": {}
 			}
 		},
 		"contentDensities": {
@@ -66,9 +66,15 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "demo",
+		"_version": "1.1.0"
 	}
 }

@@ -28,5 +28,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "p1940953245trial",
+    "name": "svgimage",
+    "lastVersionWeTriedToDeploy": "1.0.10"
   }
 }
