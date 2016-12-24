@@ -59,3 +59,8 @@ SVGImage is released under the [MIT license](http://desandro.mit-license.org). H
 * * *
 
 Made by Holger Schäfer
+=======
+UI5 SVGImage control to embed svg image 
+
+# bower register using
+$ bower register ui5-control-svgimage git://github.com/hschaefer123/ui5-control-svgimage.git
