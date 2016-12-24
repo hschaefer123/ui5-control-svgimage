@@ -6,17 +6,30 @@
 	<App>
 		<uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader isObjectTitleAlwaysVisible="false" objectTitle="{i18n>title}" objectImageURI="svg/SVG_Logo.inline.svg"/>
+				<uxap:ObjectPageHeader isObjectTitleAlwaysVisible="false" objectTitle="{i18n>title}" 
+					objectImageURI="svg/SVG_Logo.inline.svg">
+					<uxap:breadCrumbsLinks>
+						<Link text="Using SVG" href="https://css-tricks.com/using-svg/" target="_blank"/>
+						<Link text="SVGO Optimizer" href="https://jakearchibald.github.io/svgomg/" target="_blank"/>
+						<Link text="cloudconvert" href="https://cloudconvert.com/" target="_blank"/>
+						<Link text="Wikipedia SVG" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank"/>
+						<Link text="World Vector Logo" href="https://worldvectorlogo.com/" target="_blank"/>
+					</uxap:breadCrumbsLinks>
+				</uxap:ObjectPageHeader>
 			</uxap:headerTitle>
 			<uxap:headerContent>
+				<!--
 				<l:VerticalLayout>
 					<Link text="Using SVG" href="https://css-tricks.com/using-svg/" target="_blank"/>
 					<Link text="SVGO Optimizer" href="https://jakearchibald.github.io/svgomg/" target="_blank"/>
+					<Link text="cloudconvert" href="https://cloudconvert.com/" target="_blank"/>
 					<Link text="Wikipedia SVG" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank"/>
 					<Link text="World Vector Logo" href="https://worldvectorlogo.com/" target="_blank"/>
 				</l:VerticalLayout>
+				-->
+				<Text text=".{ui>/selectTheme}"/>
 				<l:VerticalLayout>
-					<Text text="Theme: .{ui>/selectTheme}" />
+					<Text text="Theme" />
 					<SegmentedButton selectedKey="{ui>/selectTheme}" select="onLibSelect">
 						<items>
 							<SegmentedButtonItem width="6rem" key="uiThemeOpenUI5" text="OpenUI5" />

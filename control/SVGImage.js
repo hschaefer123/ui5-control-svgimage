@@ -6,12 +6,23 @@ sap.ui.define([
     "sap/m/Image",
     "jquery.sap.global",
     "ui5/control/3rd/svg-injector.min"
-    //"ui5/control/3rd/jquery-svg-inject"
     ],
 	function(Image, jQuery) {
 	"use strict";
 
 	return Image.extend("ui5.control.SVGImage", {
+		
+		metadata: {
+			properties: {
+				/**
+				 * use svg inline or by reference (regular image mode)
+				 */
+				inline: {
+					type: "boolean",
+					defaultValue: true
+				}
+			}
+		},		
 		
 		init: function() {
 			// svg images are always loaded without @2
@@ -19,17 +30,14 @@ sap.ui.define([
 			
 			this.addEventDelegate({
 				onAfterRendering: function() {
-					// replace SVG with embedded version
-					if (this.getMode() === sap.m.ImageMode.Image && this._isSVG(this.getSrc())) {
+					// currently no svg as background image
+					if (this.getInline() && this.getMode() === sap.m.ImageMode.Image) {
+						// replace SVG with embedded version
 						this._injectSvg();
 					}
 				}
 			}, this);
 		},	
-		
-		_isSVG: function(sSrc) {
-			return sSrc.indexOf(".inline.svg") !== -1;
-		},
 		
 		_injectSvg: function() {
 			var $DomNode = this.$();
