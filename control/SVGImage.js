@@ -28,7 +28,7 @@ sap.ui.define([
 		},	
 		
 		_isSVG: function(sSrc) {
-			return sSrc.indexOf(".svg") !== -1;
+			return sSrc.indexOf(".inline.svg") !== -1;
 		},
 		
 		_injectSvg: function() {

@@ -52,7 +52,7 @@ sap.ui.define([
 	var _fnImageonAfterRendering = Image.prototype.onAfterRendering;
 	Image.prototype.onAfterRendering = function() {
 		// default handling proxiing onLoad, onError on image to get natural width
-		//_fnImageonAfterRendering.apply(this, arguments);
+		_fnImageonAfterRendering.apply(this, arguments);
 		
 		// replace SVG with embedded version
 		if (this.getMode() === sap.m.ImageMode.Image 
@@ -60,9 +60,6 @@ sap.ui.define([
 			// avoid double trouble using SVGImage control
 			&& this.getMetadata().getName() !== "ui5.control.SVGImage") {
 			this._injectSvg();
-		} else {
-			// default handling proxiing onLoad, onError on image to get natural width
-			//_fnImageonAfterRendering.apply(this, arguments);
 		}
 		
 		/* ORIGINAL
