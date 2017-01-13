@@ -11,6 +11,7 @@ See (https://github.com/hschaefer123/ui5-control-svgimage) for complete docs and
 
 ## Demo
 Launch Demo (https://svgimage-p1940953245trial.dispatcher.hanatrial.ondemand.com/demo/index.html)
+
 ![Demo App](./demo/img/ui5.control.SVGImage.png)
 
 
