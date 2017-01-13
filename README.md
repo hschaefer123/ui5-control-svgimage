@@ -1,18 +1,11 @@
-# ui5-control-svgimage
-UI5 SVGImage control to embed svg image
-
 # SVGImage
+## [OpenUI5 Developer Blog](http://openui5.blogspot.com/2016/11/SVGImage.html)
 
-_UI5 svg image control_
+> UI5 control to inline referenced svg files by replacing DOM image with embedded SVG object.
 
-SVGImage embedds referenced svg files by replacing DOM image with embedded SVG object.
+### [Online Demo (SAP HCP)](https://svgimage-p1940953245trial.dispatcher.hanatrial.ondemand.com/demo/index.html)
 
-See (https://github.com/hschaefer123/ui5-control-svgimage) for complete docs and demos.
-
-## Demo
-Launch Demo (https://svgimage-p1940953245trial.dispatcher.hanatrial.ondemand.com/demo/index.html)
-
-![Demo App](./demo/img/ui5.control.SVGImage.png)
+![Screenshot](ui5.control.SVGImage.png)
 
 
 ## Initialize
