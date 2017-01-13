@@ -17,7 +17,7 @@ Launch Demo (https://svgimage-p1940953245trial.dispatcher.hanatrial.ondemand.com
 
 ## Initialize
 
-With UI5
+With JavaScript
 
 ``` js
 new ui5.control.SVGImage({
@@ -34,6 +34,14 @@ xmlns:uc="ui5.control"
 ...
 <uc:SVGImage src="svg/OpenUI5.inline.svg" />
 ```
+With Prototyp
+``` js
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"ui5/control/SVGPrototype"
+```
+
+The demo showcases two different flavours. First it includes the control to show the general usage. Second it includes a prototype which adds image functionality to existing sap.m controls to allow usage of SVG inline images without further actions (see demo).
 
 ## License
 
