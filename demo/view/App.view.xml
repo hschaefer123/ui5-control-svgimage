@@ -116,6 +116,7 @@
 									</NotificationListGroup>
 								</List>
 							</uxap:ObjectPageSubSection>
+							<!--
 							<uxap:ObjectPageSubSection title="sap.f.Avatar [1.46] (currently no background SVG implemented!)">
 								<l:VerticalLayout>
 									<Label text="Regurlar"/>
@@ -134,6 +135,7 @@
 									<f:Avatar/>
 								</l:VerticalLayout>
 							</uxap:ObjectPageSubSection>
+							-->
 						</uxap:subSections>
 					</uxap:ObjectPageSection>
 				</uxap:sections>

@@ -9,6 +9,12 @@ SVGImage embedds referenced svg files by replacing DOM image with embedded SVG o
 
 See (https://github.com/hschaefer123/ui5-control-svgimage) for complete docs and demos.
 
+## Demo
+
+![Demo App](./demo/ui5.control.SVGImage.png)
+Launch Demo (https://svgimage-p1940953245trial.dispatcher.hanatrial.ondemand.com/demo/index.html)
+
+
 ## Initialize
 
 With UI5
