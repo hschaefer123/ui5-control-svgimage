@@ -1,5 +1,5 @@
 # SVGImage
-## [OpenUI5 Developer Blog](http://openui5.blogspot.com/2016/11/SVGImage.html)
+## [OpenUI5 Developer Blog](http://openui5.blogspot.com/2017/01/svgimage.html)
 
 > UI5 control to inline referenced svg files by replacing DOM image with embedded SVG object.
 
