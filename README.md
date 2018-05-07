@@ -5,7 +5,7 @@
 
 ### [Online Demo (SAP HCP)](https://svgimage-p1940953245trial.dispatcher.hanatrial.ondemand.com/demo/index.html)
 
-![Screenshot](ui5.control.SVGImage.png)
+![Screenshot](./ui5.control.SVGImage.png)
 
 
 ## Initialize
